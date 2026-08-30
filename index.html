@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExactKB — Smart Image Compressor</title>
+<meta name="description" content="Compress images to an exact target size in your browser.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-glow"></div>
+
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">E</span> ExactKB</div>
+  <div class="secure-pill"><span>●</span> Private &amp; browser-based</div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">SMART IMAGE TOOL</div>
+    <h1>Get your image to the<br><span>exact size you need.</span></h1>
+    <p>Fast, private compression for JPG, PNG and WebP. Your images stay on your device.</p>
+    <div class="hero-points">
+      <span>✓ No upload</span>
+      <span>✓ Fast processing</span>
+      <span>✓ Exact KB target</span>
+    </div>
+  </section>
+
+  <main class="card">
+    <div class="card-top">
+      <div>
+        <div class="section-kicker">COMPRESS IMAGE</div>
+        <h2>Choose your image</h2>
+      </div>
+      <div class="format-badge">JPG · PNG · WebP</div>
+    </div>
+
+    <label class="drop" id="drop">
+      <input id="file" type="file" accept="image/jpeg,image/png,image/webp">
+      <div class="upload-icon">↑</div>
+      <strong>Drop your image here</strong>
+      <span>or click to browse from your device</span>
+      <small>Maximum privacy — nothing is uploaded</small>
+    </label>
+
+    <div class="controls">
+      <div class="field">
+        <label for="target">Target size <span>KB</span></label>
+        <input id="target" type="number" min="5" max="50000" value="100">
+      </div>
+      <div class="field">
+        <label for="format">Output format</label>
+        <select id="format">
+          <option value="image/jpeg">JPG — best compatibility</option>
+          <option value="image/webp">WebP — smaller files</option>
+          <option value="image/png">PNG — lossless where possible</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="pro-tools">
+      <div class="field locked" data-pro-feature>
+        <label>Batch compression <span class="pro-label">PRO</span></label>
+        <select disabled><option>Up to 50 images at once</option></select>
+      </div>
+      <div class="field locked" data-pro-feature>
+        <label>Smart quality <span class="pro-label">PRO</span></label>
+        <select disabled><option>Automatically optimize quality</option></select>
+      </div>
+    </div>
+
+    <button class="primary" id="compress" disabled>
+      <span>Compress image</span><span>→</span>
+    </button>
+    <div class="status" id="status"></div>
+
+    <section class="result" id="result">
+      <div class="result-head">
+        <div><div class="section-kicker">RESULT</div><h3>Your optimized image</h3></div>
+        <div class="saved-badge" id="reduction">—</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><small>Original</small><b id="original">—</b></div>
+        <div class="stat"><small>Compressed</small><b id="compressed">—</b></div>
+        <div class="stat"><small>Reduction</small><b id="reduction2">—</b></div>
+      </div>
+      <img class="preview" id="preview" alt="Compressed image preview">
+      <button class="download" id="download">Download compressed image <span>↓</span></button>
+    </section>
+  </main>
+
+  <section class="premium-card">
+    <div class="premium-glow"></div>
+    <div class="premium-head">
+      <div>
+        <div class="crown">✦ PRO</div>
+        <h2>ExactKB Pro</h2>
+        <p>For people who compress images every day.</p>
+      </div>
+      <div class="price"><strong>$4.99</strong><span>/ month</span></div>
+    </div>
+
+    <div class="features">
+      <div><i>✓</i><span><b>Unlimited</b> compression</span></div>
+      <div><i>✓</i><span><b>Batch</b> up to 50 images</span></div>
+      <div><i>✓</i><span><b>ZIP</b> downloads</span></div>
+      <div><i>✓</i><span><b>JPG, PNG &amp; WebP</b> conversion</span></div>
+      <div><i>✓</i><span><b>Smart</b> quality controls</span></div>
+      <div><i>✓</i><span><b>Ad-free</b> experience</span></div>
+    </div>
+
+    <button class="upgrade" id="upgrade"><span>Upgrade to Pro</span><span>→</span></button>
+
+    <div class="premium-panel" id="premiumPanel">
+      <div class="payment-title">Secure checkout</div>
+      <div class="payment-note">$4.99 USD/month · Cancel anytime</div>
+      <div id="paypal-button-container"></div>
+      <div class="payment-status" id="paymentStatus"></div>
+    </div>
+  </section>
+
+  <div class="trust-row">
+    <span>🔒 Your files stay on your device</span>
+    <span>⚡ No sign-up required</span>
+    <span>✓ Works in your browser</span>
+  </div>
+
+  <p class="note">ExactKB processes images locally in your browser. No image upload or account is required.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
